@@ -33,13 +33,17 @@
       <div class="form-group">
         <input id="grade-it" type="button" value="Grade my quiz" class="btn btn-primary" />
       </div>
+
+      <div class="form-group">
+        <input id="show-me" type="button" value="Show me the answers" class="btn btn-primary" />
+      </div>
     </div>
 
     <script>
 
   $('#grade-it').on('click', function() {
       var presName = $('#question-1 .form-control').val();
-
+$("#question-1").removeClass('has-success has-error')
     if (presName == 'Trump' || presName == 'Donald' || presName == 'Donald Trump') {
       $("#question-1").addClass('has-success')
 
@@ -50,7 +54,7 @@
 
  $('#grade-it').on('click', function() {
    var socialPlatform = $('#question-2 .form-control').val();
-
+$("#question-2").removeClass('has-success has-error')
    if(socialPlatform == 'Twitter') {
      $("#question-2").addClass('has-success')
    } else {
@@ -60,13 +64,14 @@
 
 $('#grade-it').on('click', function() {
   var electionYear = $('#question-3 .form-control').val();
-
+$("#question-3").removeClass('has-success has-error')
   if (electionYear == "2017") {
     $("#question-3").addClass('has-success')
   } else {
     $("#question-3").addClass('has-error')
   }
 });
+
 
     </script>
   </body>
