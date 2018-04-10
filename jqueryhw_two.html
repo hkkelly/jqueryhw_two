@@ -25,6 +25,11 @@
         </select>
       </div>
 
+      <div id="question-3" class="form-group">
+        <label class="control-label">In what year was the current president elected?</label>
+        <input type="text" class="form-control" />
+      </div>
+
       <div class="form-group">
         <input id="grade-it" type="button" value="Grade my quiz" class="btn btn-primary" />
       </div>
@@ -51,8 +56,18 @@
    } else {
      $("#question-2").addClass('has-error')
    }
-
 });
+
+$('#grade-it').on('click', function() {
+  var electionYear = $('#question-3 .form-control').val();
+
+  if (electionYear == "2017") {
+    $("#question-3").addClass('has-success')
+  } else {
+    $("#question-3").addClass('has-error')
+  }
+});
+
     </script>
   </body>
 </html>
